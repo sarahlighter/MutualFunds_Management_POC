@@ -10,6 +10,4 @@ import com.demo.financeproducts.model.MutualFund;
 @Repository
 public interface MutualFundRepository extends CrudRepository<MutualFund,Long>{
 
-	MutualFund findByTicker(String ticker);
-
 }

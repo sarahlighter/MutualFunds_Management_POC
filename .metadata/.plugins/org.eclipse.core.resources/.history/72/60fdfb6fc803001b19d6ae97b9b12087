@@ -31,15 +31,16 @@ public class MutualFundController {
 		return mutualfund;
 	}
 	
-	@RequestMapping(value = "/mutualfunds/profile",params= {"id"}, method= RequestMethod.PUT)
-	public MutualFund updateMutualFund(@RequestBody MutualFund mutualfund) {
+	@RequestMapping(value = "/mutualfunds/profile",params= {"id"}, method= RequestMethod.UPDATE)
+	public MutualFund updateMutualFund(@RequestParam long id) {
 		mutualfundService.save(mutualfund);
 		return mutualfund;
 	}
 	
 	@RequestMapping(value = "/mutualfunds",params= {"id"}, method= RequestMethod.DELETE)
-	public Optional<MutualFund> deleteMutualFund(@RequestParam long id) {
-		return mutualfundService.deleteById(id);
+	public MutualFund deleteMutualFund(@RequestParam long id) {
+		mutualfundService.delete();
+		return mutualfund;
 	}
 	
 	

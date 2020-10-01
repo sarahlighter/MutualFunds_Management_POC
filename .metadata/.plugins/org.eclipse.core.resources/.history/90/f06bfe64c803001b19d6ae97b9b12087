@@ -25,24 +25,11 @@ public class MutualFundController {
 	private MutualFundService mutualfundService;
 	
 	
-	@RequestMapping(value = "/mutualfunds/profile", method= RequestMethod.POST)
+	@RequestMapping(value = "/mutualfunds", method= RequestMethod.POST)
 	public MutualFund insertMutualFund(@RequestBody MutualFund mutualfund) {
 		mutualfundService.save(mutualfund);
 		return mutualfund;
 	}
-	
-	@RequestMapping(value = "/mutualfunds/profile",params= {"id"}, method= RequestMethod.PUT)
-	public MutualFund updateMutualFund(@RequestBody MutualFund mutualfund) {
-		mutualfundService.save(mutualfund);
-		return mutualfund;
-	}
-	
-	@RequestMapping(value = "/mutualfunds",params= {"id"}, method= RequestMethod.DELETE)
-	public Optional<MutualFund> deleteMutualFund(@RequestParam long id) {
-		return mutualfundService.deleteById(id);
-	}
-	
-	
 	@RequestMapping(value = "/mutualfunds", method = RequestMethod.GET)
 	public List<MutualFund> viewAll() {
 		return mutualfundService.findAll();

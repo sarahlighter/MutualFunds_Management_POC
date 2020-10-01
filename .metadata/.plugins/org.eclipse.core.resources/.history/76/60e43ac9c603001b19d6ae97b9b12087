@@ -28,7 +28,7 @@ public class MutualFund {
 	private String shareClass;
 	private String CUSIP;
 	
-	@JsonManagedReference // prevent infinite loop
+	@JsonManagedReference
 	@OneToOne(mappedBy= "mutualfund", fetch= FetchType.LAZY,cascade=CascadeType.ALL)
 	private MutualFundAnalysis analysis;	
 

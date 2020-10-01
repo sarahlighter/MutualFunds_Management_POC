@@ -38,8 +38,9 @@ public class MutualFundController {
 	}
 	
 	@RequestMapping(value = "/mutualfunds",params= {"id"}, method= RequestMethod.DELETE)
-	public Optional<MutualFund> deleteMutualFund(@RequestParam long id) {
-		return mutualfundService.deleteById(id);
+	public MutualFund deleteMutualFund(@RequestParam long id) {
+		mutualfundService.delete();
+		return mutualfund;
 	}
 	
 	

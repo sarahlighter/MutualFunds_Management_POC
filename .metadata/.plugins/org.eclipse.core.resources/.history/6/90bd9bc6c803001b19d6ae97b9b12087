@@ -31,14 +31,8 @@ public class MutualFundService {
 		return mutualfundRepository.findById(id);
 	}
 	
-	public MutualFund update(MutualFund mutualfund) {
-		return mutualfundRepository.save(mutualfund);
-	}
-	
-	public Optional<MutualFund> deleteById(long id) {
-		Optional<MutualFund> mf= mutualfundRepository.findById(id);
-		mutualfundRepository.deleteById(id);
-		return mf;
+	public void update(MutualFund mutualFund) {
+		mutualfundRepository.save(mutualfund);
 	}
 	
 }

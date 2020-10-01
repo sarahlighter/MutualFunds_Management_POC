@@ -49,6 +49,9 @@ public class MutualFundAnalysis {
 		this.mutualfund = mutualfund;
 	}
 
+
+
+
 	public long getId() {
 		return id;
 	}
