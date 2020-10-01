@@ -1,0 +1,31 @@
+package com.demo.financeproducts.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.demo.financeproducts.model.MutualFund;
+import com.demo.financeproducts.repository.MutualFundRepository;
+
+@RestController
+
+public class MutualFundController {
+
+	@Autowired
+	private MutualFundRepository repository;
+	
+	//example /mutualfunds/profile?ticker=26176542
+	@RequestMapping(value = "/mutualfunds", method= RequestMethod.POST)
+	public MutualFund insertMutualFund(@RequestBody MutualFund mutualfund) {
+		repository.save(mutualfund);
+		return mutualfund;
+	}
+	@RequestMapping(value = "/mutualfunds", method = RequestMethod.GET)
+	public List<MutualFund> viewAll() {
+		return repository.findAll();
+	}
+}

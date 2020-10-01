@@ -1,0 +1,15 @@
+package com.demo.financeproducts.model;
+
+import java.util.List;
+
+public class MutualFundAnalysis {
+
+	private long id;
+	private double investmentRiskReportId;
+	private long morningstarReportId;
+	private String performanceReturnsId;
+	private String ManagementTeamId;
+	private List<String> holdingsId;
+	
+	
+}

@@ -1,0 +1,10 @@
+1601262810605	Rename package 'com.financeproducts.demo'
+1601262827155	Rename package 'com.financeproducts.demo.repository'
+1601262838709	Rename type 'MutualFund'
+1601265520038	Delete element
+1601266130577	Rename type 'MutualFund'
+1601266146222	Rename type 'MutualFundDao'
+1601329847783	Delete element
+1601350336109	Rename type 'MutualFundInfo'
+1601365399300	Rename type 'MutualFundInfoDao'
+1601365463373	Rename type 'MutualFundDao'

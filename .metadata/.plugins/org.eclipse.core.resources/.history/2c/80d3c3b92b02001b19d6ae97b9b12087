@@ -1,0 +1,5 @@
+package com.demo.financeproducts.controller;
+@Controller
+public class MutualFundController {
+
+}

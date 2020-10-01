@@ -1,0 +1,131 @@
+package com.demo.financeproducts.model;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+@Entity
+@Table(name = "users")
+@EntityListeners(AuditingEntityListener.class)
+public class MutualFund {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	@NotNull
+	@Column(name = "name")
+	private String name;
+	@Column(name="account_type")
+	private String accountType;
+	@Column(name="asset_class")
+	private String assetClass;
+	@NotNull
+	@Column(name="ticker")
+	private String ticker;
+	@Column(name="shareClass")
+	private String shareClass;
+	@Column(name="CUSIP")
+	private String CUSIP;
+	
+	private MutualFundAnalysis analysis;
+	
+
+	// Hibernate requires a no-arg constructor
+	public MutualFund() {
+	}
+
+	public MutualFund(long id, @NotNull String name, String accountType, String assetClass, String ticker,
+			String shareClass, String cUSIP) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.accountType = accountType;
+		this.assetClass = assetClass;
+		this.ticker = ticker;
+		this.shareClass = shareClass;
+		CUSIP = cUSIP;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+
+	public String getAssetClass() {
+		return assetClass;
+	}
+
+	public void setAssetClass(String assetClass) {
+		this.assetClass = assetClass;
+	}
+
+	public String getTicker() {
+		return ticker;
+	}
+
+	public void setTicker(String ticker) {
+		this.ticker = ticker;
+	}
+
+	public String getShareClass() {
+		return shareClass;
+	}
+
+	public void setShareClass(String shareClass) {
+		this.shareClass = shareClass;
+	}
+
+	public String getCUSIP() {
+		return CUSIP;
+	}
+
+	public void setCUSIP(String cUSIP) {
+		CUSIP = cUSIP;
+	}
+
+	
+	public MutualFundAnalysis getAnalysis() {
+		return analysis;
+	}
+
+	public void setAnalysis(MutualFundAnalysis analysis) {
+		this.analysis = analysis;
+	}
+
+	@Override
+	public String toString() {
+		return "MutualFund [id=" + id + ", name=" + name + ", accountType=" + accountType + ", assetClass=" + assetClass
+				+ ", ticker=" + ticker + ", shareClass=" + shareClass + ", CUSIP=" + CUSIP + ", analysis=" + analysis
+				+ "]";
+	}
+
+	
+
+}

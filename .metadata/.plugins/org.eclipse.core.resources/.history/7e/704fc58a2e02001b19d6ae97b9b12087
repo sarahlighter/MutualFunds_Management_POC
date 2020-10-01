@@ -1,0 +1,14 @@
+package com.demo.financeproducts;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+@EnableCircuitBreaker 
+@EnableEurekaClient
+@SpringBootApplication
+public class DemoEurekaFinanceproductsServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemoEurekaFinanceproductsServiceApplication.class, args);
+	}
+
+}

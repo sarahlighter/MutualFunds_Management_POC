@@ -1,0 +1,5 @@
+package com.financeproducts.demo.repository;
+
+public class MutualFund {
+
+}

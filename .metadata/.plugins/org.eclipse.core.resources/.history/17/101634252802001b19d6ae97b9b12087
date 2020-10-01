@@ -1,0 +1,5 @@
+package com.demo.financeproducts.config;
+
+public class JpaConfig {
+
+}
