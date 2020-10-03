@@ -7,5 +7,5 @@ import com.demo.financeproducts.model.MutualFundAnalysis;
 
 @Repository
 public interface MutualFundAnalysisRepository extends JpaRepository<MutualFundAnalysis, Long>{
-
+	
 }

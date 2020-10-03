@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,6 +20,7 @@ import com.demo.financeproducts.service.MutualFundService;
 //@RibbonClient(name="demo-mutualfund-service")
 @Controller
 @RestController
+@CrossOrigin()
 public class MutualFundController {
 
 	@Autowired
@@ -27,8 +29,7 @@ public class MutualFundController {
 	
 	@RequestMapping(value = "/mutualfunds/profile", method= RequestMethod.POST)
 	public MutualFund insertMutualFund(@RequestBody MutualFund mutualfund) {
-		mutualfundService.save(mutualfund);
-		return mutualfund;
+		return mutualfundService.save(mutualfund);
 	}
 	
 	@RequestMapping(value = "/mutualfunds/profile",params= {"id"}, method= RequestMethod.PUT)
@@ -37,7 +38,7 @@ public class MutualFundController {
 		return mutualfund;
 	}
 	
-	@RequestMapping(value = "/mutualfunds",params= {"id"}, method= RequestMethod.DELETE)
+	@RequestMapping(value = "/mutualfunds/profile",params= {"id"}, method= RequestMethod.DELETE)
 	public Optional<MutualFund> deleteMutualFund(@RequestParam long id) {
 		return mutualfundService.deleteById(id);
 	}

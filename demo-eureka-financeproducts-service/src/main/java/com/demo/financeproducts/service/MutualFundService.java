@@ -19,8 +19,8 @@ public class MutualFundService {
 		return (List<MutualFund>) mutualfundRepository.findAll();
 	}
 	
-	public void save(MutualFund mutualfund) {
-		mutualfundRepository.save(mutualfund);
+	public MutualFund save(MutualFund mutualfund) {
+		return mutualfundRepository.save(mutualfund);
 	}
 	
 	public MutualFund findByTicker(String ticker) {

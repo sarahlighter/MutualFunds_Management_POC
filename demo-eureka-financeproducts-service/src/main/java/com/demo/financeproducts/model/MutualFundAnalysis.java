@@ -22,7 +22,7 @@ public class MutualFundAnalysis {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	private double investmentRiskReportId;
+	private long investmentRiskReportId;
 	private long morningstarReportId;
 	private String performanceReturnsId;
 	private String ManagementTeamId;
@@ -37,7 +37,7 @@ public class MutualFundAnalysis {
 		
 	}
 	
-	public MutualFundAnalysis(long id, double investmentRiskReportId, long morningstarReportId,
+	public MutualFundAnalysis(long id, long investmentRiskReportId, long morningstarReportId,
 			String performanceReturnsId, String managementTeamId, HashSet<String> holdingsId, MutualFund mutualfund) {
 		super();
 		this.id = id;
@@ -61,7 +61,7 @@ public class MutualFundAnalysis {
 		return investmentRiskReportId;
 	}
 
-	public void setInvestmentRiskReportId(double investmentRiskReportId) {
+	public void setInvestmentRiskReportId(long investmentRiskReportId) {
 		this.investmentRiskReportId = investmentRiskReportId;
 	}
 
