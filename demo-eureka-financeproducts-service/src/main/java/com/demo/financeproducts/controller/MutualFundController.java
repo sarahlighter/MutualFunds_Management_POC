@@ -26,7 +26,6 @@ public class MutualFundController {
 	@Autowired
 	private MutualFundService mutualfundService;
 	
-	
 	@RequestMapping(value = "/mutualfunds/profile", method= RequestMethod.POST)
 	public MutualFund insertMutualFund(@RequestBody MutualFund mutualfund) {
 		return mutualfundService.save(mutualfund);

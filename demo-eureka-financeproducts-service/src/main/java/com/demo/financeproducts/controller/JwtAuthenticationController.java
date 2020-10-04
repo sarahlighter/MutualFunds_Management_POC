@@ -1,4 +1,4 @@
-package com.demo.financeproducts.config;
+package com.demo.financeproducts.controller;
 
 import java.util.Objects;
 
