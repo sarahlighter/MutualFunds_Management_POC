@@ -1,8 +1,0 @@
-package com.demo.financeproducts.config;
-
-@Configuration
-@EnableTransactionManagement
-@EnableJpaAuditing
-public class JpaConfig {
-
-}
